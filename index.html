@@ -1,37 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-    <title>瀑布流布局</title>
-    <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            grid-gap: 10px;
-        }
-        .grid-item {
-            background-color: #f2f2f2;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>测试</title>
 </head>
 <body>
-    <div class="grid-container" id="gridContainer"></div>
-
-    <script>
-        // 获取根目录下的所有文件
-        fetch('/api/files')
-            .then(response => response.json())
-            .then(data => {
-                const gridContainer = document.getElementById('gridContainer');
-                data.forEach(file => {
-                    const gridItem = document.createElement('div');
-                    gridItem.classList.add('grid-item');
-                    gridItem.textContent = file.name;
-                    gridContainer.appendChild(gridItem);
-                });
-            })
-            .catch(error => console.error(error));
-    </script>
+<h1>文件显示测试</h1>
 </body>
 </html>
